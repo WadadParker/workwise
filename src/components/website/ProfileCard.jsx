@@ -7,7 +7,9 @@ function ProfileCard() {
         <div className=" flex flex-col items-center justify-center gap-1 ">
           <div className="w-[100px] h-[100px] rounded-full bg-slate-700 "></div>
           <div className=" flex flex-col items-start ">
-            <h3>Wadad parker</h3>
+            <h3 className="w-full font-medium text-[20px] leading-[30px] text-[#000000] text-center ">
+              Wadad parker
+            </h3>
             <div className="flex items-center justify-center gap-3 ">
               <p>Rating</p>
               <div className="flex items-center justify-center">⭐⭐⭐⭐⭐</div>
