@@ -38,13 +38,46 @@ const clientSchema = new Schema({
 
 
 const projectSchema = new Schema({
-    title: String,
-    description: String,
-    hourlyRate: Number,
-    category: String,
-    expertise: String,
-    skills: [String],
-    status: String
+    title: {
+        type:String,
+        required:[true, "Project Title is required"]
+    },
+
+    description: {
+        type:String,
+        required:[true, "Project Description is required"]
+    },
+
+
+    hourlyRate: {
+        type:Number,
+        required:[true, "Enter Hourly Rate"]
+    },
+
+
+    category: {
+        type:String,
+        enum:{
+            values:["Developer", "Desiginer", "Content Writer", "Digital Marketting"],
+            message: `{VALUE} is not Valid`,
+        },
+        required:[true,"Select from given Category"]
+    },
+
+    expertise: {
+        type:[String],
+        required:[true,"Enter expertise"]
+    },
+
+    skills: {
+        type:[String],
+        required:[true,"Enter expertise"]
+    },
+
+    status: {
+        type:Boolean,
+        default:false
+    }
 });
 
 

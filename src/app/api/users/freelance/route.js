@@ -3,7 +3,19 @@ import { NextRequest, NextResponse } from "next/server"
 import {Freelance} from "../../../../models/freelancer"
 connectDB()
 
+// get all freelancers
+export async function GET(req){
+    try {
+        const fetchallFreelancers = await Freelance.find()
+        return NextResponse.json({msg:fetchallFreelancers},{status:200, statusText:"All Freelancers"})
+    } catch (error) {
+        return NextResponse.json({msg:"server Error"})
 
+        
+    }
+}
+
+// crate frelance
 export async function POST(req){
 
     const {name,email,password,hourlyRate,category,expertise,superStars} = await req.json()
@@ -20,8 +32,6 @@ export async function POST(req){
     try {
         const userExist = await Freelance.findOne({email})
         if(userExist){
-            console.log("seeeeeeeeee",userExist);
-
             return NextResponse.json({msg:"Already exist"})
         }else{
             const createNewFreeLance = await freelanceUser.save()

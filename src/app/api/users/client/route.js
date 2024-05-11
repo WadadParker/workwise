@@ -5,11 +5,26 @@ import { ClientModel } from "@/models/client";
 
 
 connectDB()
+
+// get all clients
+export async function GET(req){
+    try {
+        const fetchallClients = await ClientModel.find()
+        return NextResponse.json({msg:fetchallClients},{status:200, statusText:"All Clients"})
+    } catch (error) {
+        return NextResponse.json({msg:"server Error"})
+
+        
+    }
+}
+
+
+
+
+// crate client
 export async function POST(req){
 
     const {name, conpanyName, email,password} =await req.json()
-    console.log(name, conpanyName, email,password);
-
     const client = new ClientModel({
         name,
         conpanyName,
