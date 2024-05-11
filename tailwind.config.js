@@ -54,6 +54,11 @@ module.exports = {
         bg: {
           DEFAULT:"#F8FCED"
         },
+        highlight: {
+          blue:"#8277FF",
+          red: "#D3445B",
+          green:"#50BFA5",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -76,5 +81,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),require('@tailwindcss/typography')],
 };
