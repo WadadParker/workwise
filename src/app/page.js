@@ -1,13 +1,10 @@
-import Image from "next/image";
-import LandingPageModal from "@/components/modals/LandingPageModal";
+import LandingPageModal from "../components/modals/LandingPageModal";
+import LandingPage from "./landing-page/page";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      No Navabar here
-      <hr />
-      Landing Page
-      This page will also have the Landing Page modal to select between Designer n Freelancer
+    <main className="flex min-h-screen flex-col items-center ">
+      <LandingPage />
       <LandingPageModal />
     </main>
   );
