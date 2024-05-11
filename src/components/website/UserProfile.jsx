@@ -11,9 +11,9 @@ function UserProfile() {
   return (
     <section className="w-full rounded-tl-[12px] rounded-tr-[12px] pb-[20px] flex flex-col items-start justify-start gap-[38px]  ">
       {/* banner div  */}
-      <div className="w-full h-[200px] bg-red-400 overflow-hidden rounded-tl-[12px] rounded-tr-[12px] relative ">
+      <div className="w-full h-[200px]  overflow-hidden rounded-tl-[12px] rounded-tr-[12px] relative ">
         <img
-          src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="https://www.shutterstock.com/shutterstock/photos/2161819863/display_1500/stock-photo-businessman-using-laptop-computer-in-office-happy-middle-aged-man-entrepreneur-small-business-2161819863.jpg"
           alt="/banner"
           className="object-cover grow w-full h-[200px] "
         />
