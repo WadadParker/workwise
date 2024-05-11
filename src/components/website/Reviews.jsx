@@ -1,4 +1,4 @@
-import starImg from "../../../public/assets/star.png";
+import starImg from "../../../public/assets/Star.png";
 import superRatingImg from "../../../public/assets/superRatingImg.png";
 
 function Reviews({
@@ -18,7 +18,6 @@ function Reviews({
           {clientName}
         </h1>
         <div className="flex flex-col gap-3 ">
-          {/* first div  */}
           <div className=" flex items-start  ">
             <div className=" flex items-center justify-center gap-[11px] ">
               {Array.from({ length: rating }, (_, index) => {
@@ -35,10 +34,6 @@ function Reviews({
               </p>
             </div>
           </div>
-
-          {/* first div  */}
-
-          {/* second div stars gere  */}
 
           {superRating && (
             <div className="flex flex-row gap-[11px] ">
@@ -58,8 +53,6 @@ function Reviews({
               </div>
             </div>
           )}
-
-          {/* second div stars gere  */}
         </div>
       </div>
 
