@@ -1,6 +1,6 @@
-import Navbar from "@/components/website/Navbar";
-import WorkHistory from "@/components/website/WorkHistory";
-import UserProfile from "@/components/website/userProfile";
+import UserProfile from "../../../components/website/UserProfile";
+import WorkHistory from "../../../components/website/WorkHistory";
+import Navbar from "../../../components/website/Navbar";
 
 function freelanceProfile() {
   return (
