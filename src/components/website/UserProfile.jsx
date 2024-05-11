@@ -9,7 +9,7 @@ import ProfileDetails from "./ProfileDetails";
 function UserProfile() {
   // console.log(banner);
   return (
-    <section className="w-full rounded-tl-[12px] rounded-tr-[12px]  pb-[20px] flex flex-col items-start justify-start gap-[38px]  ">
+    <section className="w-full rounded-tl-[12px] rounded-tr-[12px] pb-[20px] flex flex-col items-start justify-start gap-[38px]  ">
       {/* banner div  */}
       <div className="w-full h-[200px] bg-red-400 overflow-hidden rounded-tl-[12px] rounded-tr-[12px] relative ">
         <img
