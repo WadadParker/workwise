@@ -3,6 +3,14 @@
   @tailwind utilities;
 
   @layer base {
+    * {
+      scrollbar-width: none;
+    }
+    
+    /* Hide scrollbar for Chrome, Safari, and Edge */
+    *::-webkit-scrollbar {
+      display: none;
+    }
     :root {
       --background: 0 0% 100%;
       --foreground: 222.2 84% 4.9%;
@@ -64,6 +72,14 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
+
+    .gradient-text {
+      background-image: linear-gradient(to right, #407BFF, #F90707);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
   }
 
   @layer base {
