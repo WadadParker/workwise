@@ -1,10 +1,10 @@
 import mongoose, { Schema } from "mongoose"
-
+import { Review } from "./review"
 
 const freeLanceSchema = new Schema({
 
     name:{
-        type:[String, "Name is required"],
+        type:String,
         reqiured:true,
 
     },
@@ -42,9 +42,7 @@ const freeLanceSchema = new Schema({
     superStars:{
         type:Number,
         default:0
-    }
-
-    
+    },  
     
 })
 

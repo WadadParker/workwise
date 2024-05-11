@@ -6,7 +6,9 @@ const review = new Schema({
         type:String,
         required:[true, "reveiwer name neede"]
     },
-    reviewedFor:{
+    reviewFor:{
+        type:String,
+        required:[true, "Fetch RreviewFor name"]
 
     },
     rating:{
@@ -19,3 +21,5 @@ const review = new Schema({
     }
 
 })
+
+export const Review =mongoose.models.reviews || mongoose.model("reviews",review) 
