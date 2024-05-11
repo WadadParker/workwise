@@ -18,8 +18,10 @@ const review = new Schema({
     commetn:{
         type:String,
         required:[true, "Add comment"]
-    }
+    },
+    forFreelance:{type:Schema.Types.ObjectId, ref:"freeLancers"},
+    projets:[{type:Schema.Types.ObjectId, ref:'Project'}]
 
 })
 
-export const Review =mongoose.models.reviews || mongoose.model("reviews",review) 
+export  const Review =mongoose.models.reviews || mongoose.model("reviews",review) 

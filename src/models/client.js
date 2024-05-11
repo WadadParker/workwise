@@ -33,6 +33,8 @@ const clientSchema = new Schema({
         default: []
     }
    
+
+    
 })
 
 
@@ -77,7 +79,9 @@ const projectSchema = new Schema({
     status: {
         type:Boolean,
         default:false
-    }
+    },
+
+    // client:{type:Schema.Types.ObjectId,ref:"ClientSchema"}
 });
 
 

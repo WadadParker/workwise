@@ -6,14 +6,15 @@ import { Review } from "@/models/review";
 
 connectDB()
 
-// fetch individual review for freelance
+// fetch individual review for freelancer
 export async function GET(req, {params}){
     try {
-        const sinlgeFreelance = await Review.find({_id:params.getsingleFreelance})
+        const sinlgeFreelance = await Review.find({reviewFor:{ $eq: params.userId } })
 
-        return NextResponse.json({msg:sinlgeFreelance},{status:200, statusText:"Freelancer Reviews"})
+
+        return NextResponse.json({ msg: sinlgeFreelance }, { status: 200, statusText: "Freelancer Reviews" });
     } catch (error) {
-        return NextResponse.json({msg:"server Error"})   
+        return NextResponse.json({msg:error,userId:params.userId})   
     }
 }
 
@@ -23,20 +24,21 @@ export async function GET(req, {params}){
 
 export async function POST(req,{params}){
     try {
-        const sinlgeFreelance = await Freelance.findOne({_id:params.getsingleFreelance})
+        const sinlgeFreelance = await Freelance.findOne({_id:params.userId})
         if(sinlgeFreelance){
-            const reviewForName = sinlgeFreelance.name
+            // const reviewForName = sinlgeFreelance._id
             const {reviewerName,rating,commetn} = await req.json()
+
+
             const review = new Review({
                 reviewerName,
-                reviewFor:reviewForName,
+                reviewFor:params.userId,
                 rating,
                 commetn
-            })
+                
+            })        
 
-            
             const reviewAdded= await review.save();
-
             return NextResponse.json({msg:reviewAdded},{status:201,statusText:"Review Created"})
         }
        else{

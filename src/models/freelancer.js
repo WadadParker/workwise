@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose"
-import { Review } from "./review"
+
 
 const freeLanceSchema = new Schema({
 
@@ -43,6 +43,7 @@ const freeLanceSchema = new Schema({
         type:Number,
         default:0
     },  
+    // reviews:[{type:Schema.Types.ObjectId, ref:"reviews"}]
     
 })
 
