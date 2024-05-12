@@ -54,7 +54,7 @@ function LandingPage() {
           </p>
         </div>
         <button
-          className="  bg-[#D06EE1] rounded-[47px] font-medium text-[20px] leading-[28.13px] py-[18px] px-[35px] z-20 "
+          className="  bg-[#D06EE1] rounded-[47px] border border-[#D06EE1] font-medium text-[20px] leading-[28.13px] py-[18px] px-[35px] z-20 hover:bg-white hover:text-[#D06EE1] transition-all ease-linear "
           onClick={handleShowModal}
         >
           Unlock your full potential

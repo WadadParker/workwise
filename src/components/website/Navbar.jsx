@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 //icons
 import { CiSearch } from "react-icons/ci";
 
 function Navbar() {
+  const router = useRouter();
   return (
-    <nav className="w-full pt-[27px] mb-[36px] flex items-center justify-center gap-[84px] sticky top-0 z-20 bg-bg ">
+    <nav className="w-full pt-[27px] flex items-center justify-center gap-[84px] sticky top-0 z-20 bg-bg ">
       <section className="flex items-center justify-center gap-[64px]">
         <Link href="/">
           <h1 className="font-semibold text-[24px] leading-[36.03px] text-[#000000] cursor-pointer ">
@@ -16,9 +18,9 @@ function Navbar() {
         </Link>
         <ul className="flex items-center justify-center gap-[27px] font-medium text-[24px] leading-[30.02px] text-[#000000] ">
           <li className="hover:underline cursor-pointer">Find Work</li>
-          <li className="hover:underline cursor-pointer">My Jobs</li>
+          <li className="hover:underline cursor-pointer" onClick={()=>router.push("/freelancers")}>Hire</li>
           <li className="hover:underline cursor-pointer">Dashboard</li>
-          <li className="hover:underline cursor-pointer">Messages</li>
+          <li className="hover:underline cursor-pointer" onClick={()=>router.push("/chat")}>Messages</li>
         </ul>
       </section>
       <section className="flex items-center justify-center gap-[46px]  ">
