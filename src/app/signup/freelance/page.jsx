@@ -9,6 +9,7 @@ import Stepper from './components/Stepper'
 import FillDetails from './components/FillDetails'
 import Domain from './components/Domain'
 import Expertise from "./components/Expertise"
+import Skills from './components/Skills'
 
 const page = () => {
   const [step,setStep] = useState(1);
@@ -18,6 +19,7 @@ const page = () => {
       {step==1 && <FillDetails />}
       {step==2 && <Domain />}
       {step==3 && <Expertise />}
+      {step==4 && <Skills />}
       <Stepper step={step} setStep={setStep}/>
     </div>
     </FreelanceProvider>

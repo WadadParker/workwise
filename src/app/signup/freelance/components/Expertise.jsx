@@ -8,8 +8,7 @@ const generateRandomColor=(index)=> {
         case 1 : return "#D3445B";
         case 2 : return "#50BFA5";
         case 3: return "#a855f7";
-        case 4: return "#a855f7";
-        case 5: return "#F24E1E";
+        case 4: return "#F24E1E";
     }
 }
 
@@ -32,12 +31,16 @@ const Expertise = () => {
   return (
     <section className=' mx-auto'>
       <h1 className='text-3xl leading-10 font-medium text-center mt-10'>What is your Domain?</h1>
-      <ul className='flex gap-x-10 mt-20 pb-2.5'>
+      <ul className='flex gap-x-10 mt-40 mb-36 pb-1'>
         {devExp.map((item,index)=>{
             const randomColor = generateRandomColor(index)
             return (
-            <li key={index} className={expArray.includes(item)?"bg-gray-200 text-black rounded-md py-2 px-4 hover:cursor-pointer border border-transparent hover:border-black":"text-white rounded-md py-2 px-4 hover:cursor-pointer border border-transparent"} onClick={()=>toggleArray(item)} 
-            style={{ backgroundColor: expArray.includes(item) ? "#e5e7eb" : randomColor }}>
+            <li key={index} 
+            className={expArray.includes(item)
+                ?"text-white rounded-md py-2 px-4 hover:cursor-pointer border border-transparent"
+                :"bg-gray-200 text-black rounded-md py-2 px-4 hover:cursor-pointer border border-transparent hover:border-black"}
+            onClick={()=>toggleArray(item)} 
+            style={{ backgroundColor: expArray.includes(item) ? randomColor : "e5e7eb" }}>
                 {item}
             </li>
         )})}
