@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -7,11 +7,11 @@ import { CiSearch } from "react-icons/ci";
 
 function Navbar() {
   return (
-    <nav className="w-full pt-[27px]  flex items-center justify-center gap-[84px] sticky top-0 z-20 bg-bg ">
+    <nav className="w-full pt-[27px] mb-[36px] flex items-center justify-center gap-[84px] sticky top-0 z-20 bg-bg ">
       <section className="flex items-center justify-center gap-[64px]">
-        <Link href="/"> 
-        <h1 className="font-semibold text-[24px] leading-[36.03px] text-[#000000] cursor-pointer ">
-          WorkWise
+        <Link href="/">
+          <h1 className="font-semibold text-[24px] leading-[36.03px] text-[#000000] cursor-pointer ">
+            WorkWise
           </h1>
         </Link>
         <ul className="flex items-center justify-center gap-[27px] font-medium text-[24px] leading-[30.02px] text-[#000000] ">
@@ -34,7 +34,11 @@ function Navbar() {
           />
         </div>
         <div className="w-[50px] h-[50px] rounded-full bg-slate-600 ">
-          <img src="https://www.shutterstock.com/shutterstock/photos/2161819863/display_1500/stock-photo-businessman-using-laptop-computer-in-office-happy-middle-aged-man-entrepreneur-small-business-2161819863.jpg" alt="pfp" className="size-full object-cover rounded-full" />
+          <img
+            src="https://www.shutterstock.com/shutterstock/photos/2161819863/display_1500/stock-photo-businessman-using-laptop-computer-in-office-happy-middle-aged-man-entrepreneur-small-business-2161819863.jpg"
+            alt="pfp"
+            className="size-full object-cover rounded-full"
+          />
         </div>
       </section>
     </nav>

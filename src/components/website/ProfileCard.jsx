@@ -5,7 +5,13 @@ function ProfileCard() {
     <section className="z-10 bg-[#FFFFFF] absolute top-[197px] left-[74px] w-[318px] rounded-[25px]  shadow-md shadow-yellow-400 transform translate-y-4 ">
       <div className=" flex flex-col items-center justify-center gap-[7px] pl-[45px] pr-[43px] pb-[48px] pt-[42px] ">
         <div className=" flex flex-col items-center justify-center gap-1 ">
-          <div className="w-[100px] h-[100px] rounded-full bg-slate-700 "></div>
+          <div className="w-[100px] h-[100px] rounded-full ">
+            <img
+              src="https://www.shutterstock.com/shutterstock/photos/2161819863/display_1500/stock-photo-businessman-using-laptop-computer-in-office-happy-middle-aged-man-entrepreneur-small-business-2161819863.jpg"
+              alt="/profile-avatar"
+              className="w-full h-full rounded-full object-cover "
+            />
+          </div>
           <div className=" flex flex-col items-start ">
             <h3 className="w-full font-medium text-[20px] leading-[30px] text-[#000000] text-center ">
               Wadad parker
