@@ -11,8 +11,6 @@ function Navbar() {
   const [searchValue, setSearchValue] = useState('');
 
   const handleOnChange = (e) => {
-    console.log(e.target.value);
-    console.log("i am seraching here ");
     setSearchValue(e.target.value);
   };
 
