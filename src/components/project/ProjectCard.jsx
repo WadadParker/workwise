@@ -2,7 +2,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 function ProjectCard() {
   return (
-    <section className="  pt-[12] pl-[13px] pb-[28px] pr-[13px] flex flex-col gap-3 items-start rounded-[10px] border border-solid border-[#000000] ">
+    <section className=" pt-4 pl-[13px] pb-6 pr-[13px] flex flex-col gap-3 items-start rounded-[10px] border border-solid border-[#000000] bg-white ">
       <div className="  flex flex-col gap-[2px] ">
         <p className="font-normal  text-[12px] leading-[18.1px] text-[#000000] ">
           Posted 27 min ago
@@ -20,19 +20,19 @@ function ProjectCard() {
         some pages refactoring some of the code to make the component cleaner
         and more maintainable.
       </p>
-      <div className=" flex flex-col items-start gap-[7px] ">
+      <div className=" flex flex-col items-start gap-2 ">
         <div className="flex gap-[10px] items-center justify-center ">
           <p className="rounded-[48px] px-[14px] py-[3px] bg-[#892DFF] text-white ">
             React
           </p>
-          <p className="rounded-[48px] px-[14px] py-[3px] bg-[#892DFF] text-white ">
+          <p className="rounded-[48px] px-[14px] py-[3px] bg-highlight-red text-white ">
             Next.js
           </p>
-          <p className="rounded-[48px] px-[14px] py-[3px] bg-[#892DFF] text-white ">
+          <p className="rounded-[48px] px-[14px] py-[3px] bg-highlight-green text-white ">
             TypeScript
           </p>
         </div>
-        <div className="flex items-center justify-center gap-[99px] ">
+        <div className="flex items-center justify-center gap-x-10 ">
           <p className="  font-medium text-[16px] leading-[24px] ">
             Payment verified: Yes
           </p>
@@ -44,7 +44,7 @@ function ProjectCard() {
           </div>
         </div>
       </div>
-      <button className="  rounded-[7px] bg-[#000000] text-[#FFFFFF] font-medium text-[16px] leading-[24px] px-[13px] py-[3px] ml-auto ">
+      <button className="  rounded-[7px] bg-[#000000] text-[#FFFFFF] font-medium  px-[13px] py-[3px] ml-auto ">
         Apply
       </button>
     </section>
