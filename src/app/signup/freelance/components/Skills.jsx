@@ -1,5 +1,6 @@
 "use client"
-import React , {useState} from 'react'
+import React from 'react'
+import { useFreelance } from '../FreelanceContext';
 
 const generateRandomColor=(index)=> {
     
@@ -17,35 +18,49 @@ const generateRandomColor=(index)=> {
     }
 }
 
-const Skills = () => {
+const selectSkilssOptions = (domain) => {
     const devSkills = ["HTML","CSS","JavaScript","React.js","Flutter","SQL","AWS","Kotlin","Nextjs","PHP"]
     const designSkills = ["Adobe Photoshop","Adobe Illustrator","Adobe XD","Sketch","Figma","InVision","Zeplin","Canva","Typography","Branding"]
     const contentSkills = ["SEO Optimization","Blogging Platforms ","Copy Editing","Proofreading","Research Skills","Journalism","Storytelling","Grammar Mastery","Social Media Writing","Technical Writing"]
     const digitalSkills = ["Google Analytics","Social Media Management Tools","SEMrush","CMS","Email Marketing Platforms","PPC Platforms","SEO Tools","CRO","Digital Advertising Strategy","Influencer Marketing"]
 
-    const [skillsArray,setSkillsArray] = useState([]);
+    switch(domain) {
+        case "Developer": return devSkills;
+        case "Designer": return designSkills;
+        case "Content Writer": return contentSkills;
+        case "Digital Marketing": return digitalSkills;
+        default: return devSkills;
+    }
+}
+
+const Skills = () => {
+
+    const {state:{skills,domain},dispatch} = useFreelance();
+    const  skillOptions = selectSkilssOptions(domain);
 
     const toggleArray = (text) => {
-        const found = skillsArray.find(item=>item==text)
-        if(found)
-        setSkillsArray(prev=>[...prev].filter(item=>item!==text))
+        const found = skills.find(item=>item==text)
+        if(found){
+        const filteredArray = skills.filter(item=>item!==text)
+        dispatch({type:"INPUT_FIELDS",payload:filteredArray,inputField:"skills"})
+        }
         else
-        setSkillsArray(prev=>[...prev,text])
+        dispatch({type:"INPUT_FIELDS",payload:[...skills,text],inputField:"skills"})
     }
 
   return (
     <section className=' mx-auto'>
       <h1 className='text-3xl leading-10 font-medium text-center mt-10'>Select your Skills {"(Max 10)"}</h1>
       <ul className='grid grid-cols-[auto,auto,auto,auto,auto] gap-x-10 gap-y-5 mt-40 mb-16 pb-[22px]'>
-        {devSkills.map((item,index)=>{
+        {skillOptions.map((item,index)=>{
             const randomColor = generateRandomColor(index)
             return (
             <li key={index} 
-            className={skillsArray.includes(item)
+            className={skills.includes(item)
                 ?"text-white rounded-md py-2 px-4 hover:cursor-pointer border border-transparent text-center"
                 :"bg-gray-200 text-black rounded-md py-2 px-4 hover:cursor-pointer border border-transparent hover:border-black text-center"}
             onClick={()=>toggleArray(item)}
-            style={{ backgroundColor: skillsArray.includes(item) ? randomColor : "#e5e7eb" }}>
+            style={{ backgroundColor: skills.includes(item) ? randomColor : "#e5e7eb" }}>
                 {item}
             </li>
         )})}
