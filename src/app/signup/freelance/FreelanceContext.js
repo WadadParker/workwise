@@ -17,7 +17,7 @@ export const FreelanceProvider = ({children}) => {
         password:"",
         hourlyRate:"",
         domain:"",
-        domain:[],
+        expertise:[],
         skills:[]
     }
 
