@@ -1,7 +1,23 @@
+"use client"
+import { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 
+import ReviewModal from "../modals/Rating/ReviewModal";
+import SuperStarModal from "../modals/Rating/SuperStarModal";
+
 function ProjectCard() {
+  const [showReviewModal,setShowReviewModal] = useState(false);
+  const [showSuperModal,setShowSuperModal] = useState(false);
+
+  const superStarClickHandler = () => {
+    setShowReviewModal(false)
+    setShowSuperModal(true)
+  }
+
   return (
+    <>
+    {showReviewModal && <ReviewModal setShowReviewModal={setShowReviewModal} superStarClickHandler={superStarClickHandler}/>}
+    {showSuperModal && <SuperStarModal setShowSuperModal={setShowSuperModal} />}
     <section className=" pt-4 pl-[13px] pb-6 pr-[13px] flex flex-col gap-3 items-start rounded-[10px] border border-solid border-[#000000] bg-white ">
       <div className="  flex flex-col gap-[2px] ">
         <p className="font-normal  text-[12px] leading-[18.1px] text-[#000000] ">
@@ -44,10 +60,13 @@ function ProjectCard() {
           </div>
         </div>
       </div>
-      <button className="  rounded-[7px] bg-[#000000] text-[#FFFFFF] font-medium  px-[13px] py-[3px] ml-auto ">
+      <button className="  rounded-[7px] bg-[#000000] text-[#FFFFFF] font-medium  px-[13px] py-[3px] ml-auto "
+      onClick={()=>setShowReviewModal(true)}
+      >
         Apply
       </button>
     </section>
+    </>
   );
 }
 
