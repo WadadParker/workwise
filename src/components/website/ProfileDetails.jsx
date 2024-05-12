@@ -1,3 +1,4 @@
+
 function ProfileDetails() {
   return (
     <section className="flex-1 flex flex-col items-start gap-[11px] pt-[5px] ">
@@ -6,9 +7,13 @@ function ProfileDetails() {
           <h1 className=" font-medium text-[32px] leading-[48px] text-[#000000] ">
             Front-end Developer
           </h1>
+
           <h2 className=" font-medium text-[32px] leading-[48px] text-[#000000] ">
             $40.00/hr
           </h2>
+
+
+
         </div>
         <p className=" font-normal text-[20px] leading-[30px] text-[#000000] ">
           Lorem Ipsum is simply dummy text of the printing and typesetting

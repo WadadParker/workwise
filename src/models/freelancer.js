@@ -8,7 +8,10 @@ const freeLanceSchema = new Schema({
         reqiured:true,
 
     },
-
+    description:{
+        type:String,
+        required:[true,"Enter Description"]
+    },
     email:{
         type:String,
         unique:true,
@@ -27,7 +30,7 @@ const freeLanceSchema = new Schema({
     category:{
         type :String,
         enum:{
-            values:["Developer", "Desiginer", "Content Writer", "Digital Marketting"],
+            values:["Developer", "Designer", "Content Writer", "Digital Marketting"],
             message: `{VALUE} is not Valid`,
         },
         required:[true,"Select Category"]
@@ -48,4 +51,4 @@ const freeLanceSchema = new Schema({
 })
 
 
-export const Freelance =mongoose.models.freeLancers || mongoose.model("freeLancers", freeLanceSchema) 
+export const Freelance =mongoose.models?.freeLancers || mongoose.model("freeLancers", freeLanceSchema) 

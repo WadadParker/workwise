@@ -18,9 +18,10 @@ export async function GET(req){
 // crate frelance
 export async function POST(req){
 
-    const {name,email,password,hourlyRate,category,expertise,superStars} = await req.json()
+    const {name,description,email,password,hourlyRate,category,expertise,superStars} = await req.json()
     const freelanceUser =new Freelance({
         name,
+        description,
         email,
         password,
         hourlyRate,
