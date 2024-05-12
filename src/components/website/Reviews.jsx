@@ -1,16 +1,10 @@
 import starImg from "../../../public/assets/Star.png";
 import superRatingImg from "../../../public/assets/superRatingImg.png";
 
-function Reviews({
-  clientName,
-  rating,
-  ratingCount,
-  reviewedOn,
-  review,
-  price,
-  superRating,
-  superRatingCount,
-}) {
+function Reviews({clientName,rating,ratingCount,reviewedOn,review,price,superRating,superRatingCount}) {
+ 
+
+
   return (
     <section className="flex flex-col items-start gap-[26px]  w-full pt-[15px] pl-[15px] pb-[32px] border border-solid border-b-[#AEAEAE] ">
       <div className="  flex flex-col items-start gap-[2px] ">

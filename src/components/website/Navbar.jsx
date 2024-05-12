@@ -1,11 +1,22 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 //icons
 import { CiSearch } from "react-icons/ci";
+import { Search } from "lucide-react";
 
 function Navbar() {
+
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleOnChange = (e) => {
+    console.log(e.target.value);
+    console.log("i am seraching here ");
+    setSearchValue(e.target.value);
+  };
+
+
   return (
     <nav className="w-full pt-[27px]  flex items-center justify-center gap-[84px] sticky top-0 z-20 bg-bg ">
       <section className="flex items-center justify-center gap-[64px]">
@@ -29,6 +40,8 @@ function Navbar() {
           />
           <input
             type="text"
+            value={searchValue}
+            onChange={handleOnChange}
             placeholder="Search"
             className="w-full pl-[50.44px] pt-[5.41px] pb-[4.92px] rounded-[18.25px]  border-[0.48px] border-solid border-[#000000] "
           />

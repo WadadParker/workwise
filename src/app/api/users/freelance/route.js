@@ -6,7 +6,7 @@ connectDB()
 // get all freelancers
 export async function GET(req){
     try {
-        const fetchallFreelancers = await Freelance.find()
+        const fetchallFreelancers = await Freelance.findOne({})
         return NextResponse.json({msg:fetchallFreelancers},{status:200, statusText:"All Freelancers"})
     } catch (error) {
         return NextResponse.json({msg:"server Error"})
@@ -18,15 +18,16 @@ export async function GET(req){
 // crate frelance
 export async function POST(req){
 
-    const {name,description,email,password,hourlyRate,category,expertise,superStars} = await req.json()
+    const {name,description,email,password,hourlyRate,domain,expertise,skills,superStars} = await req.json()
     const freelanceUser =new Freelance({
         name,
         description,
         email,
         password,
         hourlyRate,
-        category,
+        domain,
         expertise,
+        skills,
         superStars
     })
 

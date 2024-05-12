@@ -1,6 +1,6 @@
-import Reviews from "./Reviews";
+import Reviews from "./Reviews"; 
+async function WorkHistory() {
 
-function WorkHistory() {
   return (
     <section className=" w-full  flex flex-col items-start gap-5 mb-[15px] ">
       <h1 className="pl-[32px] font-medium text-[32px] leading-[48px] text-[#000000] ">
@@ -16,6 +16,8 @@ function WorkHistory() {
           <div className="w-full h-[3px] bg-[#FFC100] "></div>
         </div>
       </div>
+
+
       <Reviews
         clientName="XYZ Ltd."
         rating="5"

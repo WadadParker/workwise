@@ -27,19 +27,23 @@ const freeLanceSchema = new Schema({
         type:Number,
         required:[true,"Hourly Rate is required"]
     },
-    category:{
+    domain:{
         type :String,
         enum:{
-            values:["Developer", "Designer", "Content Writer", "Digital Marketting"],
+            values:["Developer", "Designer", "Content Writer", "Digital Marketing"],
             message: `{VALUE} is not Valid`,
         },
-        required:[true,"Select Category"]
+        required:[true,"Select Domain"]
 
     },
 
     expertise:{
         type:[String],
-        required:[true,"Expertise is also required"]
+       
+    },
+    skills:{
+        type:[String],
+        
     },
 
     superStars:{

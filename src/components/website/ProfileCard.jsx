@@ -5,7 +5,9 @@ function ProfileCard() {
     <section className="z-10 bg-[#FFFFFF] absolute top-[197px] left-[74px] w-[318px] rounded-[25px]  shadow-md shadow-yellow-400 transform translate-y-4 ">
       <div className=" flex flex-col items-center justify-center gap-[7px] pl-[45px] pr-[43px] pb-[48px] pt-[42px] ">
         <div className=" flex flex-col items-center justify-center gap-1 ">
-          <div className="w-[100px] h-[100px] rounded-full bg-slate-700 "></div>
+          <div className="w-[100px] h-[100px] rounded-full bg-slate-700 ">
+            <img className="rounded-full" src="https://images.unsplash.com/profile-1701785998837-d1a1ce040314image?bg=fff&crop=faces&dpr=2&h=150&w=150&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" alt="" srcset="" />
+          </div>
           <div className=" flex flex-col items-start ">
             <h3 className="w-full font-medium text-[20px] leading-[30px] text-[#000000] text-center ">
               Wadad parker
