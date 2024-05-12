@@ -70,3 +70,28 @@ Install my-project with npm
 **Client:** NextJs, ContextApi, TailwindCSS
 
 **Server:** Node, Express, MongoDb
+
+
+
+
+## How to set up locally
+
+1. Clone locally
+```
+bash git clone https://github.com/WadadParker/workwise.git
+cd workwise
+```
+
+2. Install dependencies:
+  ```
+  bash  npm install
+```
+   
+3. Run project
+   ```
+   bash npm run dev
+   ```
+
+
+
+
